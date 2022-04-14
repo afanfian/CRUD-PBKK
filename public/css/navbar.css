@@ -1,8 +1,8 @@
 /* Navbar */
 nav {
     position: fixed;
-    background-color: #38b6ff;
-    /* background-color: white; */
+    background-color: white;
+    /* background-color: #38b6ff; */
     top: 0;
     left: 0;
     z-index: 100;
@@ -12,7 +12,7 @@ nav {
 nav ul {
     padding: 0.3rem 0;
     width: 100vw;
-    border-radius: white;
+    border-radius: #38b6ff;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -29,7 +29,7 @@ li a {
     font-weight: bold;
     light-height: 1.6;
     font-size: 1.2em;
-    color: white;
+    color: #38b6ff;
     /* position: relative; */
 }
 
@@ -49,7 +49,7 @@ li a {
 
 .nav-li:hover:after {
     width: 120%;
-    background: white;
+    background: #38b6ff;
 }
 
 /* Home */
@@ -60,7 +60,7 @@ li a {
     text-align: center;
     padding-top: 10%;
     margin-left: 70%;
-    color: white;
+    color: #38b6ff;
     font-weight: bold;
 }
 .saviestance {
@@ -71,7 +71,7 @@ li a {
     justify-content: left;
 }
 .download {
-    color: white;
+    color: #38b6ff;
     padding-top: 5%;
     margin-left: 5%;
     text-align: left;
