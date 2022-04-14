@@ -49,6 +49,7 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
+                    <th>No</th>
                     <th>NPSN</th>
                     <th>Nama Sekolah</th>
                     <th>Alamat Sekolah</th>

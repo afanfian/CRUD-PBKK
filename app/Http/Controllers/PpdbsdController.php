@@ -15,7 +15,7 @@ class PpdbsdController extends Controller
     public function index()
     {
         $data = ppdbsd::all();
-        return view('list-data', [
+        return view('list-data-sd', [
             'data' => $data
             // Data yang di 'data' dipassing dari $data
         ]);
@@ -28,7 +28,7 @@ class PpdbsdController extends Controller
      */
     public function create()
     {
-        return view('create-data');
+        return view('create-data-sd');
     }
 
     /**
@@ -59,7 +59,7 @@ class PpdbsdController extends Controller
     {
         //
         $data = ppdbsd::where('id', $id)->first();
-        return view('detail-data', [
+        return view('detail-data-sd', [
             'data' => $data
         ]);
     }
@@ -75,7 +75,7 @@ class PpdbsdController extends Controller
     {
         //
         $data = ppdbsd::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
-        return view('edit-data', [
+        return view('edit-data-sd', [
             'data' => $data
         ]);
     }
@@ -97,7 +97,7 @@ class PpdbsdController extends Controller
         ]);
         $ppdbsd = ppdbsd::findOrFail($id);
         $ppdbsd->update($validatedData);
-        return redirect()->route('home')->with('edit_data', 'Pengeditan Data berhasil');
+        return redirect()->route('home')->with('edit_data-sd', 'Pengeditan Data berhasil');
     }
 
     /**
