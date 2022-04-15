@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/list-data-sd', function () {
+    return view('list-data-sd');
+});
+
 Route::group(['prefix' => 'ppdbsd', 'as' => 'ppdbsd.'], function () {
     Route::get('/', [PpdbsdController::class, 'index'])->name('home');
 });

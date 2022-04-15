@@ -1,15 +1,13 @@
 @extends('main')
 
-@section('title', 'Home')
-
-<section class="home" id="Home">
+<section class="home" id="Home" style="padding-top: 10%">
     <div class="container-lg py-4">
         <div class="row logo">
             <div class="col-md-6">
                 <img src="img/laravel.png" alt="Logo Saviestance" width="250px" style="margin-left: 10%;">
             </div>
         </div>
-        <div class="row saviestance" style="color: white">
+        <div class="row saviestance" style="color: rgb(0, 0, 0)">
             <div class="col-md-8" >
                 <p style="font-size: 4em; font-weight: bold;">
                     Fian Awamiry Maulana

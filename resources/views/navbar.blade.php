@@ -6,10 +6,10 @@
     <ul>
         <li><a href="/home" class="nav-li">Home</a></li>
         <li><a href="/main" class="nav-li">Form CRUD</a></li>
-        <li><a href="/login" class="nav-li">PPDB SD</a></li>
+        <li><a href="/ppdbsd" class="nav-li">PPDB SD</a></li>
         <li><a href="/article" class="nav-li">PPDB SMP</a></li>
     </ul>
 </nav>
-<div class="container mt-5">
+<div class="container mt-5"  style="padding-bottom: 7%">
     @yield('container')
 </div>
