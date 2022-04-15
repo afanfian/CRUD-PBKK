@@ -26,6 +26,10 @@ Route::get('/list-data-sd', function () {
     return view('list-data-sd');
 });
 
+Route::get('/create-data-sd', function () {
+    return view('create-data-sd');
+});
+
 Route::group(['prefix' => 'ppdbsd', 'as' => 'ppdbsd.'], function () {
     Route::get('/', [PpdbsdController::class, 'index'])->name('home');
 });

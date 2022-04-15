@@ -1,5 +1,7 @@
 @extends('main')
+
 <div  style="padding-bottom: 7%"></div>
+
 <section class="ppdbsd" id="ppdbsd">
     <div class="container">
         <center><h3>PPDB SD Sukolilo</h3></center>

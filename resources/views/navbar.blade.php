@@ -5,7 +5,7 @@
 <nav>
     <ul>
         <li><a href="/home" class="nav-li">Home</a></li>
-        <li><a href="/main" class="nav-li">Form CRUD</a></li>
+        <li><a href="/createsd" class="nav-li">Form CRUD</a></li>
         <li><a href="/ppdbsd" class="nav-li">PPDB SD</a></li>
         <li><a href="/article" class="nav-li">PPDB SMP</a></li>
     </ul>
