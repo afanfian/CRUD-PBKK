@@ -43,11 +43,11 @@
                             @enderror
 
                             <div>
-                                <input class="mt-3 form-control form-control-lg @error('Siswa') is-invalid @enderror" name="Siswa" type="text"
-                                placeholder="Siswa" value="{{ old('title', $data->Siswa? $data->Siswa: 'Tidak Ada Data') }}" autofocus required>
+                                <input class="mt-3 form-control form-control-lg @error('Nama_Siswa') is-invalid @enderror" name="Nama_Siswa" type="text"
+                                placeholder="Nama_Siswa" value="{{ old('title', $data->Nama_Siswa? $data->Nama_Siswa: 'Tidak Ada Data') }}" autofocus required>
                             </div>
 
-                            @error('Siswa')
+                            @error('Nama_Siswa')
                             <div class="alert alert-danger">
                                 Nama Siswa salah
                             </div>
@@ -76,11 +76,11 @@
                             @enderror
 
                             <div>
-                                <input class="mt-3 form-control form-control-lg @error('Nama') is-invalid @enderror" name="Nama" type="text"
-                                       placeholder="Nama Sekolah" value="{{ $data->Nama ? $data->Nama : 'Tidak Ada Data' }}" autofocus required>
+                                <input class="mt-3 form-control form-control-lg @error('Nama_SD') is-invalid @enderror" name="Nama_SD" type="text"
+                                       placeholder="Nama_SD Sekolah" value="{{ $data->Nama_SD ? $data->Nama_SD : 'Tidak Ada Data' }}" autofocus required>
                             </div>
 
-                            @error('Nama')
+                            @error('Nama_SD')
                             <div class="alert alert-danger">
                                 Nama Sekolah Salah
                             </div>
