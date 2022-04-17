@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ppdbsds', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('NPSN');
-            $table->string('Nama_SD');
-            $table->string('Alamat');
+            $table->foreignId('ppdbsd_id');
+            $table->integer('NISN');
+            $table->string('Nama_Siswa');
+            $table->integer('Umur');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ppdbsds');
+        Schema::dropIfExists('siswas');
     }
 };

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ppdbsd;
+use App\Models\Siswa;
 
 class PpdbsdController extends Controller
 {
@@ -15,6 +16,7 @@ class PpdbsdController extends Controller
     public function index()
     {
         $data = ppdbsd::all();
+        // $data = Siswa::all();
         return view('list-data-sd', [
             'data' => $data
             // Data yang di 'data' dipassing dari $data
@@ -40,12 +42,25 @@ class PpdbsdController extends Controller
     public function store(Request $request)
     {
         //
-        $validatedData = $request->validate([
-            'NPSN' => 'required|max:255',
-            'Nama' => 'required',
-            'Alamat' => 'required',
+        // $validatedData = $request->validate([
+        //     'NPSN' => 'required|max:255',
+        //     'Nama' => 'required',
+        //     'Alamat' => 'required',
+        // ]);
+        // ppdbsd::create($validatedData);
+        // return redirect()->route('home')->with('tambah_data', 'Penambahan Data berhasil');
+
+        $ppdbsd = ppdbsd::updateOrCreate([
+            'NPSN' => $request['NPSN'],
+            'Nama_SD' => $request['Nama_SD'],
+            'Alamat'  => $request['Alamat']
         ]);
-        ppdbsd::create($validatedData);
+        Siswa::Create([
+            'ppdbsd_id' => $ppdbsd->id,
+            'NISN' => $request['NISN'],
+            'Nama_Siswa' => $request['Nama_Siswa'],
+            'Umur' => $request['Umur']
+        ]);
         return redirect()->route('home')->with('tambah_data', 'Penambahan Data berhasil');
     }
 
@@ -59,6 +74,7 @@ class PpdbsdController extends Controller
     {
         //
         $data = ppdbsd::where('id', $id)->first();
+        // $data = siswa::where('id', $id)->first();
         return view('detail-data-sd', [
             'data' => $data
         ]);
@@ -75,6 +91,7 @@ class PpdbsdController extends Controller
     {
         //
         $data = ppdbsd::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
+        // $data = Siswa::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
         return view('edit-data-sd', [
             'data' => $data
         ]);
@@ -90,13 +107,32 @@ class PpdbsdController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $validatedData = $request->validate([
-            'NPSN' => 'required|max:255',
-            'Nama' => 'required',
-            'Alamat' => 'required',
-        ]);
+        // $validatedData = $request->validate([
+        //     'NPSN' => 'required|max:255',
+        //     'Nama' => 'required',
+        //     'Alamat' => 'required',
+        // ]);
+        // $ppdbsd = ppdbsd::findOrFail($id);
+        // $ppdbsd->update($validatedData);
+        // return redirect()->route('home')->with('edit_data-sd', 'Pengeditan Data berhasil');
+        // Siswa::updateOrCreate([
+        //     'NISN' => $request['siswa'],
+        //     'Nama' => $request['siswa'],
+        //     'Umur' => $request['siswa']
+        // ]);
         $ppdbsd = ppdbsd::findOrFail($id);
-        $ppdbsd->update($validatedData);
+        $siswa = ppdbsd::findOrFail($id);
+        $ppdbsd->update([
+            'NPSN' => $request['NPSN'],
+            'Nama_SD' => $request['Nama_SD'],
+            'Alamat' => $request['Alamat']
+        ]);
+        $siswa->update([
+            'ppdbsd_id' => $ppdbsd->id,
+            'NISN' => $request['NISN'],
+            'Nama_Siswa' => $request['Nama_Siswa'],
+            'Umur' => $request['Umur']
+        ]);
         return redirect()->route('home')->with('edit_data-sd', 'Pengeditan Data berhasil');
     }
 

@@ -30,24 +30,57 @@
                         {{-- <form id="form-login" action="{{ route('artikel.buat-data') }}" method="get"> --}}
                             {{-- @csrf --}}
                             <div>
+                                <input class="mt-3 form-control form-control-lg" name="NISN" type="text"
+                                        placeholder="NPSN" value="{{ $data->NISN ? $data->NISN : 'Tidak Ada Data' }}" readonly>
+                            </div>
+
+                            @error('NISN')
+                            <div class="alert alert-danger">
+                                NISN siswa salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg" name="Nama_Siswa" type="text"
+                                        placeholder="Nama_Siswa" value="{{ $data->Nama_Siswa ? $data->Nama_Siswa : 'Tidak Ada Data' }}" readonly>
+                            </div>
+
+                            @error('Nama_Siswa')
+                            <div class="alert alert-danger">
+                                Nama siswa salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg" name="Umur" type="text"
+                                        placeholder="Umur" value="{{ $data->Umur ? $data->Umur : 'Tidak Ada Data' }}" readonly>
+                            </div>
+
+                            @error('Umur')
+                            <div class="alert alert-danger">
+                                Umur siswa salah
+                            </div>
+                            @enderror
+                            
+                            <div>
                                 <input class="mt-3 form-control form-control-lg" name="NPSN" type="text"
                                         placeholder="NPSN" value="{{ $data->NPSN ? $data->NPSN : 'Tidak Ada Data' }}" readonly>
                             </div>
 
                             @error('NPSN')
                             <div class="alert alert-danger">
-                                Title salah
+                                NPSN sekolah salah
                             </div>
                             @enderror
 
                             <div>
-                                <input class="mt-3 form-control form-control-lg" name="Nama" type="text"
-                                        placeholder="Nama Sekolah" value="{{ $data->Nama ? $data->Nama : 'Tidak Ada Data' }}" readonly>
+                                <input class="mt-3 form-control form-control-lg" name="Nama_SD" type="text"
+                                        placeholder="Nama_SD Sekolah" value="{{ $data->Nama_SD ? $data->Nama_SD : 'Tidak Ada Data' }}" readonly>
                             </div>
 
-                            @error('Nama')
+                            @error('Nama_SD')
                             <div class="alert alert-danger">
-                                Password Salah
+                                Nama Sekolah Salah
                             </div>
                             @enderror
 
@@ -58,7 +91,7 @@
 
                             @error('Alamat')
                             <div class="alert alert-danger">
-                                Password Salah
+                                Alamat Sekolah Salah
                             </div>
                             @enderror
                         {{-- </form> --}}

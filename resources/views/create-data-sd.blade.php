@@ -21,6 +21,39 @@
                         <form id="form-login" action="{{ route('ppdbsd.buat-data') }}" method="post">
                             @csrf
                             <div>
+                                <input class="mt-3 form-control form-control-lg" name="NISN" type="text"
+                                    placeholder="NISN" autofocus required>
+                            </div>
+
+                            @error('NISN')
+                            <div class="alert alert-danger">
+                                NISN Salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg" name="Nama_Siswa" type="text"
+                                    placeholder="Nama Siswa" autofocus required>
+                            </div>
+
+                            @error('Nama_Siswa')
+                            <div class="alert alert-danger">
+                                Nama Siswa Salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg" name="Umur" type="text"
+                                    placeholder="Umur" autofocus required>
+                            </div>
+
+                            @error('Umur')
+                            <div class="alert alert-danger">
+                                Umur Salah
+                            </div>
+                            @enderror
+
+                            <div>
                                 <input class="mt-3 form-control form-control-lg" name="NPSN" type="text"
                                     placeholder="NPSN" autofocus required>
                             </div>
@@ -32,11 +65,11 @@
                             @enderror
 
                             <div>
-                                <input class="mt-3 form-control form-control-lg" name="Nama" type="text"
+                                <input class="mt-3 form-control form-control-lg" name="Nama_SD" type="text"
                                     placeholder="Nama Sekolah" autofocus required>
                             </div>
 
-                            @error('Nama')
+                            @error('Nama_SD')
                             <div class="alert alert-danger">
                                 Nama Sekolah Salah
                             </div>

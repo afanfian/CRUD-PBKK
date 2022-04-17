@@ -5,7 +5,7 @@
 <section class="ppdbsd" id="ppdbsd">
     <div class="container">
         <center><h3>PPDB SD Sukolilo</h3></center>
-
+        <a href="{{ route('ppdbsd.tambah-data') }}" class="btn btn-success shadow" style="font-size: 12px"><i class="fa fa-plus-circle fa-s"></i> Tambah</a>
         <br/>
         <br/>
         @if (Session::has('tambah_data'))
@@ -42,6 +42,9 @@
             <thead class="thead-dark">
                 <tr>
                     <th>No</th>
+                    <th>NISN</th>
+                    <th>Nama Siswa</th>
+                    <th>Umur</th>
                     <th>NPSN</th>
                     <th>Nama Sekolah</th>
                     <th>Alamat Sekolah</th>
@@ -53,8 +56,11 @@
             @foreach($data as $d)
             <tr>
                 <td>{{ $it }}</td>
+                <td>{{ $d->NISN}}</td>
+                <td>{{ $d->Nama_Siswa }}</td>
+                <td>{{ $d->Umur}}</td>
                 <td>{{ $d->NPSN}}</td>
-                <td>{{ $d->Nama }}</td>
+                <td>{{ $d->Nama_SD }}</td>
                 <td>{{ $d->Alamat}}</td>
                 <td>
                     <form onsubmit="return confirm('Apakah Anda Yakin Menghapus Data ini ?');" action="{{ route('ppdbsd.destroy', $d->id) }}" method="POST">

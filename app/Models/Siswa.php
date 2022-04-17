@@ -5,18 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ppdbsd extends Model
+class Siswa extends Model
 {
     use HasFactory;
-    protected $table = 'ppdbsds';
+    protected $table = 'siswas';
     protected $guarded = [];
     protected $fillable = [
-        'NPSN',
-        'Nama_SD',
-        'Alamat'
+        'ppdbsd_id',
+        'NISN',
+        'Nama_Siswa',
+        'Umur'
     ];
-    public function siswa()
+    public function ppdbsd()
     {
-        return $this->hasMany(Siswa::class);
+        return $this->belongsTo(ppdbsd::class);
     }
 }

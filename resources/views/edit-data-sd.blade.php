@@ -32,13 +32,46 @@
                             @csrf
 
                             <div>
+                                <input class="mt-3 form-control form-control-lg @error('NISN') is-invalid @enderror" name="NISN" type="text"
+                                placeholder="NISN" value="{{ old('title', $data->NISN? $data->NISN: 'Tidak Ada Data') }}" autofocus required>
+                            </div>
+
+                            @error('NISN')
+                            <div class="alert alert-danger">
+                                NISN Siswa salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg @error('Siswa') is-invalid @enderror" name="Siswa" type="text"
+                                placeholder="Siswa" value="{{ old('title', $data->Siswa? $data->Siswa: 'Tidak Ada Data') }}" autofocus required>
+                            </div>
+
+                            @error('Siswa')
+                            <div class="alert alert-danger">
+                                Nama Siswa salah
+                            </div>
+                            @enderror
+
+                            <div>
+                                <input class="mt-3 form-control form-control-lg @error('Umur') is-invalid @enderror" name="Umur" type="text"
+                                placeholder="Umur" value="{{ old('title', $data->Umur? $data->Umur: 'Tidak Ada Data') }}" autofocus required>
+                            </div>
+
+                            @error('Umur')
+                            <div class="alert alert-danger">
+                                Umur Siswa salah
+                            </div>
+                            @enderror
+
+                            <div>
                                 <input class="mt-3 form-control form-control-lg @error('NPSN') is-invalid @enderror" name="NPSN" type="text"
                                 placeholder="NPSN" value="{{ old('title', $data->NPSN? $data->NPSN: 'Tidak Ada Data') }}" autofocus required>
                             </div>
 
                             @error('title')
                             <div class="alert alert-danger">
-                                Title salah
+                                NPSN salah
                             </div>
                             @enderror
 
