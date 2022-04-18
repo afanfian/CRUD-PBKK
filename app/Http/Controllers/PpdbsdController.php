@@ -15,8 +15,8 @@ class PpdbsdController extends Controller
      */
     public function index()
     {
-        $data = ppdbsd::all();
-        // $data = Siswa::all();
+        // $data = ppdbsd::all();
+        $data = Siswa::all();
         return view('list-data-sd', [
             'data' => $data
             // Data yang di 'data' dipassing dari $data
@@ -73,7 +73,7 @@ class PpdbsdController extends Controller
     public function show($id)
     {
         //
-        $data = ppdbsd::where('id', $id)->first();
+        $data = Siswa::where('id', $id)->first();
         // $data = siswa::where('id', $id)->first();
         return view('detail-data-sd', [
             'data' => $data
@@ -90,7 +90,7 @@ class PpdbsdController extends Controller
     public function edit($id)
     {
         //
-        $data = ppdbsd::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
+        $data = Siswa::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
         // $data = Siswa::where('id', $id)->first(); //Mengambil data untuk id tersebut dipassing ke edit
         return view('edit-data-sd', [
             'data' => $data

@@ -5,6 +5,7 @@
 <nav>
     <ul>
         <li><a href="/home" class="nav-li">Home</a></li>
+        <li><a href="/create-data-sd" class="nav-li">Create Data</a></li>
         <li><a href="/ppdbsd" class="nav-li">PPDB SD</a></li>
     </ul>
 </nav>

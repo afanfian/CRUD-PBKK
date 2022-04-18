@@ -59,13 +59,12 @@
                 <td>{{ $d->NISN}}</td>
                 <td>{{ $d->Nama_Siswa }}</td>
                 <td>{{ $d->Umur}}</td>
-                <td>{{ $d->NPSN}}</td>
-                <td>{{ $d->Nama_SD }}</td>
-                <td>{{ $d->Alamat}}</td>
+                <td>{{ $d->ppdbsd->NPSN}}</td>
+                <td>{{ $d->ppdbsd->Nama_SD }}</td>
+                <td>{{ $d->ppdbsd->Alamat}}</td>
                 <td>
                     <form onsubmit="return confirm('Apakah Anda Yakin Menghapus Data ini ?');" action="{{ route('ppdbsd.destroy', $d->id) }}" method="POST">
                         
-                        <a href="{{ route('ppdbsd.tambah-data') }}" class="btn btn-success shadow" style="font-size: 12px"><i class="fa fa-plus-circle fa-s"></i> Tambah</a>
                         |
                         <a href="{{ Route('ppdbsd.edit', $d->id) }}" class="btn btn-sm btn-primary shadow"><i class="fa fa-edit"></i> Edit</a>
                         |

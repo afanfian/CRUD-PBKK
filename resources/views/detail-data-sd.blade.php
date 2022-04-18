@@ -64,7 +64,7 @@
                             
                             <div>
                                 <input class="mt-3 form-control form-control-lg" name="NPSN" type="text"
-                                        placeholder="NPSN" value="{{ $data->NPSN ? $data->NPSN : 'Tidak Ada Data' }}" readonly>
+                                        placeholder="NPSN" value="{{ $data->ppdbsd->NPSN ? $data->ppdbsd->NPSN : 'Tidak Ada Data' }}" readonly>
                             </div>
 
                             @error('NPSN')
@@ -75,7 +75,7 @@
 
                             <div>
                                 <input class="mt-3 form-control form-control-lg" name="Nama_SD" type="text"
-                                        placeholder="Nama_SD Sekolah" value="{{ $data->Nama_SD ? $data->Nama_SD : 'Tidak Ada Data' }}" readonly>
+                                        placeholder="Nama_SD Sekolah" value="{{ $data->ppdbsd->Nama_SD ? $data->ppdbsd->Nama_SD : 'Tidak Ada Data' }}" readonly>
                             </div>
 
                             @error('Nama_SD')
@@ -86,7 +86,7 @@
 
                             <div>
                                 <input class="mt-3 form-control form-control-lg" name="Alamat" type="text"
-                                        placeholder="Alamat Sekolah" value="{{ $data->Alamat ? $data->Alamat : 'Tidak Ada Data' }}" readonly>
+                                        placeholder="Alamat Sekolah" value="{{ $data->ppdbsd->Alamat ? $data->ppdbsd->Alamat : 'Tidak Ada Data' }}" readonly>
                             </div>
 
                             @error('Alamat')
