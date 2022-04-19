@@ -4,15 +4,15 @@
 
 <section class="ppdbsd" id="ppdbsd">
     <div class="container">
-        <center><h3>PPDB SD Sukolilo</h3></center>
-        <a href="{{ route('ppdbsd.tambah-data') }}" class="btn btn-success shadow" style="font-size: 12px"><i class="fa fa-plus-circle fa-s"></i> Tambah</a>
+        <center><h3>PPDB Sekolah Dasar Sukolilo</h3></center>
+        {{-- <a href="{{ route('ppdbsd.tambah-data') }}" class="btn btn-success shadow" style="font-size: 12px"><i class="fa fa-plus-circle fa-s"></i> Tambah</a> --}}
         <br/>
         <br/>
         @if (Session::has('tambah_data'))
             <div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 100%; height:auto;">
                 <strong><i class="fa fa-check-circle"></i> Berhasil!</strong>
                 <br>
-                    Penambahan ppdbsd Berhasil
+                    Penambahan Data PPDB SD Berhasil
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </button>

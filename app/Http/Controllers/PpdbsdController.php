@@ -61,7 +61,7 @@ class PpdbsdController extends Controller
             'Nama_Siswa' => $request['Nama_Siswa'],
             'Umur' => $request['Umur']
         ]);
-        return redirect()->route('home')->with('tambah_data', 'Penambahan Data berhasil');
+        return redirect()->route('home')->with('tambah_data', 'Penambahan Data PPDB berhasil');
     }
 
     /**
@@ -133,7 +133,7 @@ class PpdbsdController extends Controller
             'Nama_Siswa' => $request['Nama_Siswa'],
             'Umur' => $request['Umur']
         ]);
-        return redirect()->route('home')->with('edit_data-sd', 'Pengeditan Data berhasil');
+        return redirect()->route('home')->with('edit_data-sd', 'Pengeditan Data PPDB berhasil');
     }
 
     /**
@@ -147,6 +147,6 @@ class PpdbsdController extends Controller
         //
         $data = Siswa::findOrFail($id);
         $data->delete();
-        return redirect()->route('home')->with('hapus_data', 'Penghapusan data berhasil');
+        return redirect()->route('home')->with('hapus_data', 'Penghapusan data PPDB berhasil');
     }
 }
