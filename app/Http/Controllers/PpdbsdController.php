@@ -120,8 +120,8 @@ class PpdbsdController extends Controller
         //     'Nama' => $request['siswa'],
         //     'Umur' => $request['siswa']
         // ]);
-        $ppdbsd = ppdbsd::findOrFail($id);
-        $siswa = ppdbsd::findOrFail($id);
+        $siswa = Siswa::findOrFail($id);
+        $ppdbsd = ppdbsd::findOrFail($siswa->ppdbsd_id);
         $ppdbsd->update([
             'NPSN' => $request['NPSN'],
             'Nama_SD' => $request['Nama_SD'],
@@ -145,8 +145,8 @@ class PpdbsdController extends Controller
     public function destroy($id)
     {
         //
-        $ppdbsd = ppdbsd::findOrFail($id);
-        $ppdbsd->delete();
+        $data = Siswa::findOrFail($id);
+        $data->delete();
         return redirect()->route('home')->with('hapus_data', 'Penghapusan data berhasil');
     }
 }
