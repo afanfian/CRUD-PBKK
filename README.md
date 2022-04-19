@@ -23,6 +23,6 @@
 ![edit1.png](https://drive.google.com/uc?export=view&id=1GlSKDnisgmp4CRjXLEnsYhyBEO4xkLLG)
 ![edit2.png](https://drive.google.com/uc?export=view&id=1tgXi9VkymIKtYwJOVLpNrx-IMXWW8kpU)
 **Delete Data**
-![nama.png](https://drive.google.com/uc?export=view&id=1xiD8mCYC-yJ-dfiwflsXlFV_KP1CLWUG)
-![nama.png](https://drive.google.com/uc?export=view&id=1jX5J2a0LwJw6Qz671u5qmiJyQUDgHtp_)
-![nama.png](https://drive.google.com/uc?export=view&id=1ymv5VJxc9XD2iMo6XbfySbtVouNYZacH)
+![hapus1.png](https://drive.google.com/uc?export=view&id=1xiD8mCYC-yJ-dfiwflsXlFV_KP1CLWUG)
+![hapus2.png](https://drive.google.com/uc?export=view&id=1jX5J2a0LwJw6Qz671u5qmiJyQUDgHtp_)
+![hapus3.png](https://drive.google.com/uc?export=view&id=1ymv5VJxc9XD2iMo6XbfySbtVouNYZacH)
