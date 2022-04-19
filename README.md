@@ -17,7 +17,7 @@
 ![create.png](https://drive.google.com/uc?export=view&id=1FcFIWSwmIlfDN3WYvBeU_Lr4N5ITgS4E)
 ![create2.png](https://drive.google.com/uc?export=view&id=1COZ9sXf7Ezxnv1U1fWYJmyvFqhYYBrRw)
 **Read Data**
-![create3.png](https://drive.google.com/uc?export=view&id=1tSfQj2-N623SInqXUOIdCGGsO4MLsD4l/)
+![create3.png](https://drive.google.com/uc?export=view&id=1tSfQj2-N623SInqXUOIdCGGsO4MLsD4l)
 **Update Data**
 ![edit1.png](https://drive.google.com/uc?export=view&id=1GlSKDnisgmp4CRjXLEnsYhyBEO4xkLLG)
 ![edit2.png](https://drive.google.com/uc?export=view&id=1tgXi9VkymIKtYwJOVLpNrx-IMXWW8kpU)
